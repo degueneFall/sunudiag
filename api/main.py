@@ -2,8 +2,10 @@
 
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
+from fastapi.middleware.cors import CORSMiddleware
 import joblib
 import pandas as pd
+
 
 app = FastAPI(
     title="SunuDiag API",
@@ -13,7 +15,13 @@ app = FastAPI(
     ),
     version="2.0",
 )
-
+# Autoriser le navigateur a appeler l'API depuis une autre origine
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # Le modele est charge UNE SEULE FOIS, au demarrage du serveur
 modele = joblib.load("models/model.pkl")
 FEATURES = ["age", "glycemie", "hemoglobine", "fievre", "saison"]
