@@ -3,6 +3,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 import joblib
 import pandas as pd
 
@@ -53,3 +54,5 @@ def predict(patient: Patient):
         "pre_diagnostic": "A ORIENTER" if proba >= 0.5 else "risque faible",
         "avertissement": "Ne remplace pas un avis medical.",
     }
+# Servir le frontend a la racine -- TOUJOURS en dernier
+app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
