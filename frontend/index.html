@@ -419,10 +419,23 @@
     margin: 0.9rem 0 0.4rem;
     padding: 0.9rem 1rem;
     border-radius: var(--radius);
-    background: var(--warn-bg);
-    border: 1px solid rgba(180, 83, 9, 0.2);
-    color: #9a3412;
-    font-size: 0.82rem;
+    background: #fff1f2;
+    border: 1.5px solid #fb7185;
+    color: #9f1239;
+    font-size: 0.84rem;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    line-height: 1.45;
+  }
+
+  .notice-icon {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.1rem;
+    color: #e11d48;
   }
 
   footer {
@@ -534,7 +547,14 @@
         <div class="legend-item"><span class="dot mid"></span> 30 à 50% — à surveiller</div>
         <div class="legend-item"><span class="dot risk"></span> 50% et plus — à orienter</div>
       </div>
-      <p class="notice">Outil de pré-diagnostic pédagogique. Ne remplace jamais l’avis d’un professionnel de santé.</p>
+      <p class="notice">
+        <svg class="notice-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 3.2 2.8 19.2h18.4L12 3.2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M12 9.2v5.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="12" cy="16.8" r="1" fill="currentColor"/>
+        </svg>
+        <span>Outil de pré-diagnostic pédagogique. Ne remplace jamais l’avis d’un professionnel de santé.</span>
+      </p>
     </aside>
 
     <section id="apropos" class="section">
