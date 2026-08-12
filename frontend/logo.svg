@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="12" y1="8" x2="70" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#0a5c56"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="40" y1="18" x2="58" y2="62" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f0c674"/>
+      <stop offset="1" stop-color="#e8a94b"/>
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="20" fill="url(#bg)"/>
+  <!-- shield -->
+  <path d="M40 16c8.5 4.2 16 5.2 20 5.8v22.4c0 11.2-7.8 18.4-20 22.8-12.2-4.4-20-11.6-20-22.8V21.8c4-.6 11.5-1.6 20-5.8Z"
+        fill="#fff8ef" fill-opacity=".16" stroke="#fff8ef" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- thermometer -->
+  <rect x="36.2" y="26" width="7.6" height="26" rx="3.8" fill="#fff8ef"/>
+  <circle cx="40" cy="54.5" r="7.2" fill="url(#warm)"/>
+  <rect x="38.2" y="30" width="3.6" height="18" rx="1.8" fill="url(#warm)"/>
+  <!-- pulse / diagnostic mark -->
+  <path d="M22 41h6.2l2.4-6.5 3.4 13 2.6-6.5H42"
+        stroke="#fff8ef" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+</svg>
