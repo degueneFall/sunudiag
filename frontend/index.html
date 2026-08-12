@@ -6,59 +6,115 @@
 <title>SunuDiag - Pre-diagnostic du paludisme</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-b from-teal-50 to-slate-100 min-h-screen p-4 sm:p-6">
-<div class="max-w-md mx-auto">
-  <header class="text-center mb-8 pt-4">
-    <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-teal-600 text-white text-2xl font-bold mb-3 shadow-lg shadow-teal-600/30">+</div>
-    <h1 class="text-3xl font-extrabold text-slate-800 tracking-tight">SunuDiag</h1>
-    <p class="text-slate-500 text-sm mt-1">Pre-diagnostic du paludisme</p>
+<body class="min-h-screen bg-gradient-to-br from-teal-500 via-emerald-500 to-teal-700 relative overflow-x-hidden">
+
+<!-- Decorative blobs -->
+<div class="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl -translate-x-1/3 -translate-y-1/3"></div>
+<div class="absolute bottom-0 right-0 w-96 h-96 bg-amber-300/20 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+
+<div class="relative max-w-md mx-auto px-4 py-8 sm:py-12">
+
+  <!-- Hero -->
+  <header class="text-center mb-8">
+    <div class="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-white text-teal-600 text-4xl mb-4 shadow-2xl shadow-black/20 rotate-3">
+      🩺
+    </div>
+    <h1 class="text-4xl font-extrabold text-white tracking-tight drop-shadow-sm">SunuDiag</h1>
+    <p class="text-teal-50 text-sm mt-2 max-w-xs mx-auto">
+      Pre-diagnostic rapide du paludisme, pour orienter en quelques secondes
+    </p>
+    <div class="flex items-center justify-center gap-2 mt-4">
+      <span class="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-medium px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/20">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse"></span>
+        Modele DataSANTE-221
+      </span>
+    </div>
   </header>
 
-  <div class="bg-white rounded-2xl shadow-xl shadow-slate-200 border border-slate-100 p-6 space-y-5">
+  <!-- Card -->
+  <div class="bg-white rounded-3xl shadow-2xl shadow-black/20 p-6 sm:p-7 space-y-5">
+
+    <div class="flex items-center gap-2 pb-1">
+      <div class="w-9 h-9 rounded-xl bg-teal-50 flex items-center justify-center text-lg">📋</div>
+      <div>
+        <h2 class="font-bold text-slate-800 text-sm">Informations du patient</h2>
+        <p class="text-xs text-slate-400">Tous les champs sont requis</p>
+      </div>
+    </div>
+
     <div>
-      <label for="age" class="block text-sm font-semibold text-slate-700 mb-1">Age (annees)</label>
+      <label for="age" class="flex items-center gap-1.5 text-sm font-semibold text-slate-700 mb-1.5">
+        <span>🎂</span> Age (annees)
+      </label>
       <input type="number" id="age" value="34"
-        class="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-slate-800 focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition">
+        class="w-full rounded-xl border-2 border-slate-100 bg-slate-50 p-3 text-slate-800 font-medium focus:bg-white focus:border-teal-500 focus:ring-4 focus:ring-teal-100 outline-none transition">
     </div>
+
     <div>
-      <label for="fievre" class="block text-sm font-semibold text-slate-700 mb-1">Temperature (C)</label>
+      <label for="fievre" class="flex items-center gap-1.5 text-sm font-semibold text-slate-700 mb-1.5">
+        <span>🌡️</span> Temperature (C)
+      </label>
       <input type="number" id="fievre" step="0.1" value="39.2"
-        class="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-slate-800 focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition">
+        class="w-full rounded-xl border-2 border-slate-100 bg-slate-50 p-3 text-slate-800 font-medium focus:bg-white focus:border-teal-500 focus:ring-4 focus:ring-teal-100 outline-none transition">
+      <p class="text-xs text-slate-400 mt-1 ml-1">Normale : environ 36.5 - 37.5 C</p>
     </div>
+
     <div>
-      <label for="glycemie" class="block text-sm font-semibold text-slate-700 mb-1">Glycemie (mmol/L)</label>
+      <label for="glycemie" class="flex items-center gap-1.5 text-sm font-semibold text-slate-700 mb-1.5">
+        <span>🩸</span> Glycemie (mmol/L)
+      </label>
       <input type="number" id="glycemie" step="0.1" value="5.8"
-        class="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-slate-800 focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition">
+        class="w-full rounded-xl border-2 border-slate-100 bg-slate-50 p-3 text-slate-800 font-medium focus:bg-white focus:border-teal-500 focus:ring-4 focus:ring-teal-100 outline-none transition">
+      <p class="text-xs text-slate-400 mt-1 ml-1">Normale a jeun : 4.0 - 6.0 mmol/L</p>
     </div>
+
     <div>
-      <label for="hemoglobine" class="block text-sm font-semibold text-slate-700 mb-1">Hemoglobine (g/dL)</label>
+      <label for="hemoglobine" class="flex items-center gap-1.5 text-sm font-semibold text-slate-700 mb-1.5">
+        <span>🧬</span> Hemoglobine (g/dL)
+      </label>
       <input type="number" id="hemoglobine" step="0.1" value="13.1"
-        class="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-slate-800 focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition">
+        class="w-full rounded-xl border-2 border-slate-100 bg-slate-50 p-3 text-slate-800 font-medium focus:bg-white focus:border-teal-500 focus:ring-4 focus:ring-teal-100 outline-none transition">
+      <p class="text-xs text-slate-400 mt-1 ml-1">Normale : 12 - 16 g/dL (variable selon sexe)</p>
     </div>
+
     <div>
-      <label for="saison" class="block text-sm font-semibold text-slate-700 mb-1">Saison</label>
+      <label for="saison" class="flex items-center gap-1.5 text-sm font-semibold text-slate-700 mb-1.5">
+        <span>🌦️</span> Saison
+      </label>
       <select id="saison"
-        class="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 text-slate-800 focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition">
+        class="w-full rounded-xl border-2 border-slate-100 bg-slate-50 p-3 text-slate-800 font-medium focus:bg-white focus:border-teal-500 focus:ring-4 focus:ring-teal-100 outline-none transition">
         <option value="1">Saison des pluies</option>
         <option value="0">Saison seche</option>
       </select>
     </div>
 
     <button id="btn" onclick="analyser()"
-      class="w-full bg-teal-600 hover:bg-teal-700 active:bg-teal-800 text-white font-semibold py-3.5 rounded-xl shadow-lg shadow-teal-600/30 transition disabled:opacity-60 disabled:cursor-not-allowed">
-      Analyser
+      class="w-full bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 active:scale-[0.98] text-white font-bold py-4 rounded-2xl shadow-lg shadow-teal-600/30 transition disabled:opacity-60 disabled:cursor-not-allowed disabled:active:scale-100 flex items-center justify-center gap-2">
+      <span>🔍</span> Analyser
     </button>
   </div>
 
   <div id="resultat" class="mt-6"></div>
 
-  <p class="mt-8 text-xs text-center text-slate-400 leading-relaxed px-4">
-    Outil de pre-diagnostic. Ne remplace jamais l'avis d'un professionnel de sante.
+  <!-- Info section -->
+  <div class="mt-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 text-teal-50">
+    <h3 class="font-semibold text-sm flex items-center gap-2 mb-2">
+      <span>ℹ️</span> Comment ca marche ?
+    </h3>
+    <p class="text-xs leading-relaxed text-teal-50/90">
+      SunuDiag utilise un modele de machine learning entraine sur des donnees cliniques
+      pour estimer une probabilite de paludisme a partir de cinq indicateurs simples.
+      Le resultat oriente la decision, il ne la remplace pas.
+    </p>
+  </div>
+
+  <p class="mt-6 text-xs text-center text-teal-50/80 leading-relaxed px-4">
+    ⚠️ Outil de pre-diagnostic. Ne remplace jamais l'avis d'un professionnel de sante.
   </p>
 
-  <footer class="mt-8 text-center text-xs text-slate-500">
+  <footer class="mt-8 text-center text-xs text-teal-50/60 space-y-0.5 pb-4">
     <p>SunuDiag - (c) 2026 Deguene Fall</p>
-    <p>Master 1 IABD - UAHB</p>
+    <p>Master 1 IABD - DMI/FST/UCAD</p>
   </footer>
 </div>
 
@@ -98,19 +154,20 @@ async function analyser() {
     afficherErreur("API injoignable. Le serveur est-il lance ?");
   } finally {
     btn.disabled = false;
-    btn.textContent = "Analyser";
+    btn.innerHTML = '<span>🔍</span> Analyser';
   }
 }
 
 function afficherResultat(data) {
   const p = data.probabilite_paludisme;
   let couleur = "bg-green-50 border-green-500 text-green-800";
-  if (p >= 0.5) couleur = "bg-red-50 border-red-500 text-red-800";
-  else if (p >= 0.3) couleur = "bg-orange-50 border-orange-500 text-orange-800";
+  let emoji = "✅";
+  if (p >= 0.5) { couleur = "bg-red-50 border-red-500 text-red-800"; emoji = "⚠️"; }
+  else if (p >= 0.3) { couleur = "bg-orange-50 border-orange-500 text-orange-800"; emoji = "🔶"; }
 
   document.getElementById("resultat").innerHTML = `
-    <div class="border-l-4 rounded-xl p-5 shadow-md ${couleur}">
-      <p class="text-sm font-medium opacity-80">Probabilite de paludisme</p>
+    <div class="border-l-4 rounded-2xl p-5 shadow-xl ${couleur}">
+      <p class="text-sm font-medium opacity-80">${emoji} Probabilite de paludisme</p>
       <p class="text-5xl font-extrabold mt-1">${(p * 100).toFixed(1)}%</p>
       <p class="mt-2 font-semibold">${data.pre_diagnostic}</p>
     </div>`;
@@ -118,8 +175,8 @@ function afficherResultat(data) {
 
 function afficherErreur(message) {
   document.getElementById("resultat").innerHTML = `
-    <div class="border-l-4 border-slate-400 bg-slate-50 rounded-xl p-4 shadow-sm text-slate-700">
-      <p>${message}</p>
+    <div class="border-l-4 border-slate-400 bg-white rounded-2xl p-4 shadow-md text-slate-700">
+      <p>⚠️ ${message}</p>
     </div>`;
 }
 </script>
